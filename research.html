@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research — Md Faizul Amin</title>
+<meta name="description" content="Research by Md Faizul Amin — Z-scan and nonlinear optics, and computational image enhancement." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23eaf3ef'/%3E%3Cpath d='M4 20 C8 12 12 12 16 20 C20 28 24 28 28 20' stroke='%232f8f82' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-brand">Md Faizul Amin</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Research</h1>
+      <p>Two questions about light meeting matter: what happens under intense illumination, and how to pull a clean signal out of a noisy image. Click a topic below for the full write-up.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <a href="#" class="back-link" id="back-link" hidden>&larr; Back to all research</a>
+
+      <div id="list-view"></div>
+
+      <article id="detail-view" hidden>
+        <div class="detail-meta" data-field="meta"></div>
+        <h2 data-field="title"></h2>
+        <div class="detail-body" data-field="body"></div>
+        <div class="tag-row" data-field="tags"></div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <p style="margin-bottom:0; max-width:44ch;">Md Faizul Amin — MSc student, Department of Physics, Shahjalal University of Science and Technology, Sylhet.</p>
+      <div class="footer-links">
+        <a href="mailto:mdfaizulamin@gmail.com">Email</a>
+        <a href="https://github.com/faizul-amin">GitHub</a>
+        <a href="https://www.linkedin.com/in/faizul-amin/">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-note">© <span data-year>2026</span> Md Faizul Amin.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    /*
+     * Add a new research topic by copying one of the objects below.
+     * id        — short, unique, URL-safe (used in the link, e.g. #z-scan)
+     * meta      — small line shown above the title (status, date, etc.)
+     * excerpt   — one line shown in the list view
+     * bodyHtml  — the full write-up; wrap paragraphs in <p>...</p>
+     * tags      — short labels shown under the write-up
+     */
+    var researchItems = [
+      {
+        id: "z-scan",
+        title: "Z-scan & Nonlinear Optics",
+        meta: "Ongoing — MSc thesis work",
+        excerpt: "Measuring how a material's refractive index and absorption shift under intense laser illumination.",
+        bodyHtml:
+          "<p>The Z-scan technique moves a sample through the focus of a Gaussian laser beam and records the transmitted power as a function of position, z. Where the intensity is highest — at focus — a nonlinear medium refracts and absorbs light differently than it does far from focus, and that difference shows up directly in the transmittance curve.</p>" +
+          "<p><strong style=\"color:var(--text)\">Closed-aperture Z-scan</strong> — a finite aperture in front of the detector makes the measurement sensitive to nonlinear refraction. A pre-focal valley followed by a post-focal peak signals self-focusing (n₂ &gt; 0); the reverse order signals self-defocusing (n₂ &lt; 0).</p>" +
+          "<p><strong style=\"color:var(--text)\">Open-aperture Z-scan</strong> — removing the aperture makes the measurement sensitive only to nonlinear absorption: two-photon absorption (TPA), reverse saturable absorption (RSA), or saturable absorption (SA).</p>" +
+          "<p>Together, the closed- and open-aperture curves separate the real and imaginary parts of the third-order nonlinear susceptibility, χ⁽³⁾, giving n₂ and β for the material under test.</p>",
+        tags: ["n₂", "β", "χ⁽³⁾", "TPA · RSA · SA"]
+      },
+      {
+        id: "image-enhancement",
+        title: "Computational Image Enhancement",
+        meta: "B.Sc. (Honours) project — submitted 30 Jun 2026",
+        excerpt: "A Fourier-domain, DC-preserved homomorphic filter applied to phase-contrast microscopy, scored against five image-quality metrics.",
+        bodyHtml:
+          "<p>Phase-contrast microscopy trades brightness uniformity for contrast at cell boundaries, which leaves images with an uneven illumination field that plain contrast stretching can't fix. This project applies a homomorphic filter in the Fourier domain — separating the slowly-varying illumination component from the fast-varying reflectance component — while deliberately preserving the DC term, so overall brightness isn't lost in the process.</p>" +
+          "<p>The filtered images are of onion epidermal cells, from a dataset acquired by Md Julfikar Rahman in the Non-Linear Optics Research Laboratory, Department of Physics, SUST. Filter parameters were swept and each result scored against five quantitative image-quality metrics, alongside visual inspection, to find the parameter range that actually improves the image rather than just changing it.</p>" +
+          "<p>Supervised by Dr. Md. Enamul Hoque, Department of Physics, SUST.</p>",
+        tags: ["Michelson contrast", "RMS contrast", "Shannon entropy", "Mean local entropy", "Laplacian variance"]
+      }
+    ];
+
+    renderTopicList(
+      document.getElementById("list-view"),
+      document.getElementById("detail-view"),
+      document.getElementById("back-link"),
+      researchItems,
+      { emptyHtml: "<p>Nothing posted yet.</p>" }
+    );
+  });
+</script>
+</body>
+</html>

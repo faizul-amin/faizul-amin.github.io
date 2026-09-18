@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — Md Faizul Amin</title>
+<meta name="description" content="Md Faizul Amin's blog — notes on physics, research explainers, and things I'm learning." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23eaf3ef'/%3E%3Cpath d='M4 20 C8 12 12 12 16 20 C20 28 24 28 28 20' stroke='%232f8f82' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-brand">Md Faizul Amin</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="research.html">Research</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Notes on physics — research explainers, things I'm learning, and the occasional detour. Click a post below to read it.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <a href="#" class="back-link" id="back-link" hidden>&larr; Back to all posts</a>
+
+      <div id="list-view"></div>
+
+      <article id="detail-view" hidden>
+        <div class="detail-meta" data-field="meta"></div>
+        <h2 data-field="title"></h2>
+        <div class="detail-body" data-field="body"></div>
+        <div class="tag-row" data-field="tags"></div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <p style="margin-bottom:0; max-width:44ch;">Md Faizul Amin — MSc student, Department of Physics, Shahjalal University of Science and Technology, Sylhet.</p>
+      <div class="footer-links">
+        <a href="mailto:mdfaizulamin@gmail.com">Email</a>
+        <a href="https://github.com/faizul-amin">GitHub</a>
+        <a href="https://www.linkedin.com/in/faizul-amin/">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-note">© <span data-year>2026</span> Md Faizul Amin.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    /*
+     * ADDING A POST
+     * Copy this object into the posts array below and fill it in:
+     *
+     * {
+     *   id: "some-short-url-safe-id",     // used in the link, e.g. #some-short-url-safe-id
+     *   title: "Your post title",
+     *   meta: "12 Oct 2026 · Nonlinear optics",
+     *   excerpt: "One line shown in the list.",
+     *   bodyHtml: "<p>First paragraph.</p><p>Second paragraph.</p>",
+     *   tags: ["Optional", "Tags"]
+     * }
+     *
+     * Put newer posts first — the list shows them in this order.
+     */
+    var posts = [
+      // no posts yet — add your first one here
+    ];
+
+    renderTopicList(
+      document.getElementById("list-view"),
+      document.getElementById("detail-view"),
+      document.getElementById("back-link"),
+      posts,
+      {
+        emptyHtml:
+          '<div class="empty-state">' +
+          '<svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 26 C11 14 16 14 22 26 C28 38 33 38 40 26" /></svg>' +
+          "<p>Posts are on their way. This page is ready to go — the first write-up will show up here.</p>" +
+          "</div>"
+      }
+    );
+  });
+</script>
+</body>
+</html>
