@@ -10,9 +10,9 @@
   --panel-alt: #eaf3ef;
   --line: rgba(31, 111, 102, 0.18);
   --line-soft: rgba(31, 111, 102, 0.10);
-  --text: #142420;
-  --text-muted: #3c534c;
-  --text-faint: #5f7a72;
+  --text: #0e1a17;
+--text-muted: #24352f;
+--text-faint: #46615a;
   --accent: #2f8f82;
   --accent-deep: #1f6f66;
   --accent-soft: rgba(47, 143, 130, 0.12);
@@ -149,9 +149,11 @@ section + section { border-top: 1px solid var(--line-soft); }
 .empty-state p { max-width: 48ch; }
 
 .detail-view .detail-meta { color: var(--text-faint); font-size: 0.98rem; margin-bottom: 12px; }
-.detail-view h2 { margin-bottom: 20px; }
+.detail-view h2 { margin-bottom: 36px; }
 .detail-body p { font-size: 1.06rem; }
 .detail-body p + p { margin-top: 1em; }
+.detail-body h3 { margin-top: 2.3em; margin-bottom: 0.7em; }
+.detail-body h3:first-child { margin-top: 0; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
 .tag { font-size: 0.88rem; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid rgba(47,143,130,0.22); padding: 5px 12px; border-radius: 999px; }
