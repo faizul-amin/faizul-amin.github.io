@@ -18,8 +18,8 @@
   --accent-soft: rgba(47, 143, 130, 0.12);
   --sage: #7fae8c;
   --sage-soft: rgba(127, 174, 140, 0.18);
-  --serif: "Times New Roman", Times, serif;
---sans: "Times New Roman", Times, serif;
+  --serif: Verdana, Geneva, sans-serif;
+--sans: Verdana, Geneva, sans-serif;
   --container: 1240px;
   --radius: 8px;
 }
