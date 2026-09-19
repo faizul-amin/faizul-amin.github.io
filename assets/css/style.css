@@ -148,8 +148,8 @@ section + section { border-top: 1px solid var(--line-soft); }
 .empty-state svg { width: 42px; height: 42px; color: var(--sage); }
 .empty-state p { max-width: 48ch; }
 
-#detail-view h2 { margin-bottom: 56px; }
-#detail-view .detail-meta { color: var(--text-faint); font-size: 0.98rem; margin-bottom: 20px; }
+#detail-view h2 { margin-bottom: 12px; }
+#detail-view .detail-meta { color: var(--text-faint); font-size: 0.98rem; margin-bottom: 56px; }
 .detail-body p { font-size: 1.06rem; }
 .detail-body p + p { margin-top: 1em; }
 .detail-body h3 { margin-top: 3.4em; margin-bottom: 1.1em; }
